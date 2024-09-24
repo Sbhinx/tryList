@@ -6,7 +6,7 @@
 typedef int* E;
 
 //顺序表
-struct List {
+struct linearList {
 
 	//用数组作为存储媒介
 	//E array[10];
@@ -23,7 +23,7 @@ struct List {
 };
 
 //arraylist是指向struct List的指针
-typedef struct List* ArrayList;
+typedef struct linearList* ArrayList;
 
 _Bool initList(ArrayList list) {
 	/*
@@ -153,7 +153,9 @@ void printListInfo(ArrayList list) {             //编写一个函数用于打�
 //主程序
 int main() {
 
-	struct List list;
+	//初始化线性表
+	struct linearList list;
+
 	if (initList(&list)) {
 		for (int i = 0; i <= 20; ++i)
 			insertListElement(&list, i, i);
@@ -168,7 +170,7 @@ int main() {
 	printListInfo(&list);
 
 	//删除操作
-	deleteListElement(&list, 5);
+	deleteListElement(&list, -1);
 	printListInfo(&list);
 
 }
