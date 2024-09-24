@@ -40,6 +40,7 @@ _Bool initList(ArrayList list) {
 
 	//判断申请内存失败的情况
 	if(list->array == NULL){
+		printf("初始化线性表时:申请内存失败!\n");
 		return 0;
 	}
 
@@ -53,7 +54,7 @@ _Bool initList(ArrayList list) {
 	return 1;
 }
 
-_Bool insertList(ArrayList list, E element, int index) {
+_Bool insertListElement(ArrayList list, E element, int index) {
 
 	/*
 
@@ -73,18 +74,21 @@ _Bool insertList(ArrayList list, E element, int index) {
 		//重新分配
 		E* newArray = realloc(list->array, (sizeof(E) * newCapacity));
 		if (newArray == NULL) {
+			printf("扩容线性表时:申请内存失败!\n");
 			return 0;
 		}
 		
 		//应用更改
 		list->array = newArray;
 		list->capacity = newCapacity;
+		printf("线性表已扩容至:%d\n", newCapacity);
 
 	}
 
 
 	//判断插入的位置是否合法
 	if (index < 1 || index > list->size + 1) {
+		printf("插入线性表时:插入的位置无效！\n");
 		return 0;
 	}
 
@@ -103,14 +107,45 @@ _Bool insertList(ArrayList list, E element, int index) {
 	return 1;
 }
 
-void printList(ArrayList list) {             //编写一个函数用于打印表当前的数据
+_Bool deleteListElement(ArrayList list, int index) {
+	/*
+		删除线性表某个位置中的元素
+		param：
+			ArrayList list:线性表
+			int index:要删除元素的位序
+		return:
+			是否操作成功
 
+	*/
+
+	//判断删除元素的位序是否合法(仅[1,size)有效)
+	if (index < 1 || index > list->size) {
+		printf("删除元素时:位序无效！\n");
+		return 0;
+	}
+
+	//将需要的元素用后面的元素覆盖即可，后续依次进行删除
+	for (int i = index - 1; i < list->size; i++) {
+		
+		list->array[i] = list->array[i + 1];
+
+	}
+	//对size进行更新
+	list->size--;
+	return 1;
+}
+
+void printListInfo(ArrayList list) {             //编写一个函数用于打印表当前的数据
+	
+	printf("当前线性表的内容为:\n");
 	for (int i = 0; i < list->size; ++i) {   //表里面每个元素都拿出来打印一次
 		
 		printf("%d ", list->array[i]);
 
 	}
 	printf("\n");
+	printf("当前线性表的元素量为:%d\n", list->size);
+	printf("当前线性表的容量为:%d\n", list->capacity);
 
 }
 
@@ -120,13 +155,22 @@ int main() {
 
 	struct List list;
 	if (initList(&list)) {
-		for (int i = 0; i < 30; ++i)
-			insertList(&list, i, i);
-		printList(&list);
+		for (int i = 0; i <= 20; ++i)
+			insertListElement(&list, i, i);
+		printListInfo(&list);
 	}
 	else {
 		printf("顺序表初始化失败，无法启动程序！");
 	}
+
+	//插入操作
+	insertListElement(&list, 12365464, 5);
+	printListInfo(&list);
+
+	//删除操作
+	deleteListElement(&list, 5);
+	printListInfo(&list);
+
 }
 
 
