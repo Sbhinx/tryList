@@ -8,7 +8,7 @@
 
 # links
 
-bilibili：[@青空の霞光](https://space.bilibili.com/37737161)
+Bilibili：[@青空の霞光](https://space.bilibili.com/37737161)
 
-[柏码网](www.itbaima.cn)
+[柏码网](https://www.itbaima.cn/)
 
