@@ -5,7 +5,7 @@
 typedef int* E;
 
 //顺序表
-struct linearList {
+struct SequenceList {
 
 	//用数组作为存储媒介
 	//E array[10];
@@ -24,16 +24,16 @@ struct linearList {
 };
 
 //arraylist是指向struct List的指针
-typedef struct linearList* ArrayList;
+typedef struct SequenceList* ArrayList;
 
 //初始化线性表
-_Bool initLinearList(ArrayList list);
+_Bool initSequenceList(ArrayList list);
 
 //插入元素
-_Bool insertLinearListElement(ArrayList list, E element, int index);
+_Bool insertSequenceListElement(ArrayList list, E element, int index);
 
 //删除元素
-_Bool deleteLinearListElement(ArrayList list, int index);
+_Bool deleteSequenceListElement(ArrayList list, int index);
 
 //显示线性表信息
-void printLinearListInfo(ArrayList list);
+void printSequenceListInfo(ArrayList list);

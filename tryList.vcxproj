@@ -134,10 +134,10 @@
   <ItemGroup>
     <ClCompile Include="tryLinkedList.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="tryLinearList.c" />
+    <ClCompile Include="trySequenceList.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="linearList.h" />
+    <ClInclude Include="sequenceList.h" />
     <ClInclude Include="linkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

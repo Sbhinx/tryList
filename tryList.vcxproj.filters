@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tryLinearList.c">
+    <ClCompile Include="trySequenceList.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.c">
@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="linearList.h">
+    <ClInclude Include="sequenceList.h">
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="linkedList.h">

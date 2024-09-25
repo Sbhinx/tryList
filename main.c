@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "linearList.h"
+#include "SequenceList.h"
 #include "linkedList.h"
 
 
@@ -8,28 +8,29 @@
 int main() {
 
 
-	/*
+	
 	//初始化线性表
-	struct linearList list;
+	struct SequenceList list;
 
-	if (initLinearList(&list)) {
+	if (initSequenceList(&list)) {
 		for (int i = 1; i <= 20; ++i)
-			insertLinearListElement(&list, i, i);
-		printLinearListInfo(&list);
+			insertSequenceListElement(&list, i, i);
+		printSequenceListInfo(&list);
 	}
 	else {
 		printf("顺序表初始化失败，无法启动程序！");
 	}
 
 	//插入操作
-	insertLinearListElement(&list, 12365464, 5);
-	printLinearListInfo(&list);
+	insertSequenceListElement(&list, 12365464, 5);
+	printSequenceListInfo(&list);
 
 	//删除操作
-	deleteLinearListElement(&list, -1);
-	printLinearListInfo(&list);
+	deleteSequenceListElement(&list, -1);
+	printSequenceListInfo(&list);
 
-	*/
+	
+	/*
 
 	//初始化链表头节点
 	struct listNode head;
@@ -47,4 +48,5 @@ int main() {
 	deleteLinkedListElement(&head, 100);
 	printLinkedListInfo(&head);
 	return 1;
+	*/
 }

@@ -1,11 +1,11 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
-#include "linearList.h"
+#include "sequenceList.h"
 
 
 
 
-_Bool initLinearList(ArrayList list) {
+_Bool initSequenceList(ArrayList list) {
 	/*
 		初始化list
 		params:
@@ -34,7 +34,7 @@ _Bool initLinearList(ArrayList list) {
 	return 1;
 }
 
-_Bool insertLinearListElement(ArrayList list, E element, int index) {
+_Bool insertSequenceListElement(ArrayList list, E element, int index) {
 
 	/*
 
@@ -87,7 +87,7 @@ _Bool insertLinearListElement(ArrayList list, E element, int index) {
 	return 1;
 }
 
-_Bool deleteLinearListElement(ArrayList list, int index) {
+_Bool deleteSequenceListElement(ArrayList list, int index) {
 	/*
 		删除线性表某个位置中的元素
 		param：
@@ -115,7 +115,7 @@ _Bool deleteLinearListElement(ArrayList list, int index) {
 	return 1;
 }
 
-void printLinearListInfo(ArrayList list) {             //编写一个函数用于打印表当前的数据
+void printSequenceListInfo(ArrayList list) {             //编写一个函数用于打印表当前的数据
 
 	printf("当前线性表的内容为:\n");
 	for (int i = 0; i < list->size; ++i) {   //表里面每个元素都拿出来打印一次
