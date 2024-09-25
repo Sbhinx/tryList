@@ -53,7 +53,7 @@ int main() {
 	printLinkedListInfo(&head);
 
 	//访问元素
-	printf("访问的元素为:%d\n",getLinkedListElement(&head, 5));
+    printf("访问的元素为:%d\n",*getLinkedListElement(&head, 5));
 
 	//查找某元素在该链表第一次出现的位置
 	E element = 200;
