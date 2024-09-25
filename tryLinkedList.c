@@ -136,7 +136,7 @@ E* getLinkedListElement(listNode head, int index) {
 
 	} while (--index);
 	//返回节点对应的值
-	return head->element;
+    return &head->element;
 
 }
 
@@ -183,7 +183,7 @@ int caculateLinkedListSize(listNode head) {
 	while (head!= NULL) { //也是利用NULL停止循环
 		
 		lenth++;
-		head = *head->nextNode;
+        head = head->nextNode;
 		
 	}
 
@@ -193,6 +193,7 @@ int caculateLinkedListSize(listNode head) {
 
 
 void printLinkedListInfo(listNode head) {
+    listNode t = head;
 
 	//打印链表
 	while (head->nextNode) {
@@ -203,6 +204,5 @@ void printLinkedListInfo(listNode head) {
 	}
 	printf("\n");
 	//打印链表长度
-	printf("该链表的长度为:%d", caculateLinkedListSize(&head));
-
+    printf("该链表的长度为:%d", caculateLinkedListSize(t));
 }

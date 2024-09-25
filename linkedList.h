@@ -2,7 +2,7 @@
 # include<stdlib.h>
 
 //线性表数据类型
-typedef int* E;
+typedef int E;
 
 struct listNode {
 
