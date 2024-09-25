@@ -104,8 +104,96 @@ _Bool deleteLinkedListElement(listNode head, int index) {
 	return 1;
 }
 
-void printLinkedListInfo(listNode head) {
+E* getLinkedListElement(listNode head, int index) {
+	/*
+		访问链表某个位置的元素
+		param:
+			listNode head:被访问链表的头节点
+			int index:被访问链表的位置
+		return:
+			指向被访问元素的指针
+	*/
+
+	//判断访问的位置是否合法
+	if (index < 1) {
+		printf("访问链表时:访问位置非法！\n");
+		return NULL;
+	}
 	
+	//找到访问的节点
+	do {
+
+		//printf("%d", index);
+
+		head = head->nextNode;
+
+		//检查head是否超出链表
+		if (head == NULL) {
+			printf("访问链表时:访问位置超出！\n");
+			return NULL;
+		}
+		
+
+	} while (--index);
+	//返回节点对应的值
+	return head->element;
+
+}
+
+int findLinkedListElement(listNode head, E element) {
+	/*
+		查找链表中第一次出现某元素的位置
+		param:
+			listNode head:被查找的链表的头节点
+			E element;查找的元素
+		return:
+			该元素第一次出现时的位置
+	*/
+
+	//先移动到第一个节点
+	head = head->nextNode;
+	//计数器
+	int i = 1;
+	//开始查找
+	while (head) {
+
+		
+		//找到了即可返回
+		if (head->element == element) {
+			return i;
+		}
+		head = head->nextNode;
+		i++;
+	}
+	printf("未查找到链表中包含指定元素！\n");
+	return -1;
+}
+
+int caculateLinkedListSize(listNode head) {
+	/*
+		计算链表的长度
+		param:
+			listNode head
+		return:
+			长度
+	*/
+
+	//计数器
+	int lenth = 0;
+	while (head!= NULL) { //也是利用NULL停止循环
+		
+		lenth++;
+		head = *head->nextNode;
+		
+	}
+
+	return lenth;
+}
+
+
+
+void printLinkedListInfo(listNode head) {
+
 	//打印链表
 	while (head->nextNode) {
 		head = head->nextNode;
@@ -115,7 +203,6 @@ void printLinkedListInfo(listNode head) {
 	}
 	printf("\n");
 	//打印链表长度
-	//printf()
+	printf("该链表的长度为:%d", caculateLinkedListSize(&head));
 
 }
-
