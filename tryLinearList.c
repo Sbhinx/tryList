@@ -5,7 +5,7 @@
 
 
 
-_Bool initList(ArrayList list) {
+_Bool initLinearList(ArrayList list) {
 	/*
 		初始化list
 		params:
@@ -34,7 +34,7 @@ _Bool initList(ArrayList list) {
 	return 1;
 }
 
-_Bool insertListElement(ArrayList list, E element, int index) {
+_Bool insertLinearListElement(ArrayList list, E element, int index) {
 
 	/*
 
@@ -87,7 +87,7 @@ _Bool insertListElement(ArrayList list, E element, int index) {
 	return 1;
 }
 
-_Bool deleteListElement(ArrayList list, int index) {
+_Bool deleteLinearListElement(ArrayList list, int index) {
 	/*
 		删除线性表某个位置中的元素
 		param：
@@ -115,7 +115,7 @@ _Bool deleteListElement(ArrayList list, int index) {
 	return 1;
 }
 
-void printListInfo(ArrayList list) {             //编写一个函数用于打印表当前的数据
+void printLinearListInfo(ArrayList list) {             //编写一个函数用于打印表当前的数据
 
 	printf("当前线性表的内容为:\n");
 	for (int i = 0; i < list->size; ++i) {   //表里面每个元素都拿出来打印一次

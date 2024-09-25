@@ -27,13 +27,13 @@ struct linearList {
 typedef struct linearList* ArrayList;
 
 //初始化线性表
-_Bool initList(ArrayList list);
+_Bool initLinearList(ArrayList list);
 
 //插入元素
-_Bool insertListElement(ArrayList list, E element, int index);
+_Bool insertLinearListElement(ArrayList list, E element, int index);
 
 //删除元素
-_Bool deleteListElement(ArrayList list, int index);
+_Bool deleteLinearListElement(ArrayList list, int index);
 
 //显示线性表信息
-void printListInfo(ArrayList list);
+void printLinearListInfo(ArrayList list);
