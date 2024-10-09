@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "SequenceList.h"
 #include "linkedList.h"
-
+#include "doublyLinkedList.h"
 
 //主程序
 int main() {
@@ -31,23 +31,25 @@ int main() {
 	printSequenceListInfo(&list);
 
 	*/
-	
-	
+
+
+	/*
+
 
 	//初始化链表头节点
 	struct listNode head;
-	
+
 	//初始化链表
 	initLinkedList(&head);
 
 	//插入操作
-	
+
 	for (int i = 1; i <= 10; ++i) {
 		insertLinkedListElement(&head, i*100, i);
 	}
 	printLinkedListInfo(&head);
 
-	
+
 	//删除操作
 	deleteLinkedListElement(&head, 5);
 	printLinkedListInfo(&head);
@@ -60,5 +62,13 @@ int main() {
 	printf("'%d'在该链表第一次出现的位置在: %d\n", element,findLinkedListElement(&head, element));
 
 	return 1;
-	
+
+	*/
+
+
+
+	struct doublyListNode node;
+	initDoublyList(&node);
+	for (int i = 1; i < 5; ++i)  //插5个元素吧
+		insertDoublyList(&node, i , i* 100);
 }

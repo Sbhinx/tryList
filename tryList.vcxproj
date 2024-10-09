@@ -132,11 +132,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="tryDoublyLinkedList.c" />
     <ClCompile Include="tryLinkedList.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="trySequenceList.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="doublyLinkedList.h" />
     <ClInclude Include="sequenceList.h" />
     <ClInclude Include="linkedList.h" />
   </ItemGroup>

@@ -24,12 +24,18 @@
     <ClCompile Include="tryLinkedList.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="tryDoublyLinkedList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sequenceList.h">
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="linkedList.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="doublyLinkedList.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
